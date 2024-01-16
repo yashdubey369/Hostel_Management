@@ -5,6 +5,7 @@ import NavBar from './Components/NavBar';
 import SideNav from './Components/SideNav';
 import Hostel from './Pages/Hostel';
 import Mess from './Pages/Mess';
+import Footer from './Components/Footer';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route exact path="/hostel" element={<Hostel/>}/>
             <Route exact path="/mess" element={<Mess/>}/>
         </Routes>
+        <Footer/>
       </Router>
     </div>
   );
