@@ -12,4 +12,4 @@ ssh-keygen -t rsa -b 4096 -C "your-email.com@example.com"
 tail<path to id_rsa.pub> # add this key to your github account
 
 git remte add origin <ssh- url.git>
-git push origin master
+git push origin main
