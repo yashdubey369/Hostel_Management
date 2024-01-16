@@ -2,7 +2,11 @@
  
  function Hostel() {
    return (
-     <div>Hostel</div>
+    <div> 
+        <h1>
+         Hostel
+        </h1> 
+    </div>
    )
  }
  

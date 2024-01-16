@@ -2,7 +2,11 @@ import React from 'react'
 
 function Mess() {
   return (
-    <div>Mess</div>
+    <div>
+    <h1>
+        Mess
+    </h1>
+    </div>
   )
 }
 
