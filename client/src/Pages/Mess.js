@@ -4,7 +4,7 @@ function Mess() {
   return (
     <div>
     <h1>
-        Mess
+        this is Mess page
     </h1>
     </div>
   )
