@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+}
+.virat {
+  background-color: pink;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.hello {
+  display: flex;
+  list-style-type: none;
+  margin: 4.5px;
+  padding-left: 0;
+}
+.ji {
+  margin-left: 16px;
+}
