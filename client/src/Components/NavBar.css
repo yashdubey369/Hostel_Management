@@ -1,23 +1,99 @@
 * {
   margin: 0;
 }
-.virat {
-  background-color: pink;
+.nav-main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  background: #000124;
+  align-items: center;
+  justify-content: space-between;
+border-radius: 20px 20px 0px 0;} 
+.nav-search {
+  height: 50%;
+  width: 60%;
+  margin-left: 30%;
+}
+:root {
+  --rad: 30px;
+  --dur: 0.3s;
+  --color-dark: #d8cfcf;
+  --color-light: #0a0c3ae1;
+  --color-brand: #57bd84;
+  --font-fam: "Lato", sans-serif;
+  --height: 5rem;
+  --btn-width: 6rem;
+  --bez: cubic-bezier(0, 0, 0.43, 1.49);
+}
+body {
+  background: var(--color-dark);
   display: flex;
   align-items: center;
-  justify-content: end;
-  padding-right: 2rem;
-  padding-left: 2rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  justify-content: center;
 }
-
-.hello {
-  display: flex;
-  list-style-type: none;
-  margin: 4.5px;
-  padding-left: 0;
+html {
+  box-sizing: border-box; 
+  height: 100%; 
+  font-size: 10px;
 }
-.ji {
-  margin-left: 16px;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+form {
+  
+  position: relative;
+  width: 65rem;
+  background: var(--color-brand);
+  border-radius: var(--rad);
+}
+input,
+button {
+  height: var(--height);
+  font-family: var(--font-fam);
+  border: 0;
+  color: var(--color-dark);
+  font-size: 1.8rem;
+}
+input[type="search"] {
+  outline: 0;
+  width: 100%;
+  background: var(--color-light);
+  padding: 0 1.6rem;
+  border-radius: var(--rad);
+  appearance: none;
+  transition: all var(--dur) var(--bez);
+  transition-property: width, border-radius;
+  z-index: 1;
+  position: relative;
+}
+button {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: var(--btn-width);
+  font-weight: bold;
+  background: var(--color-brand);
+  border-radius: 0 var(--rad) var(--rad) 0;
+}
+input:not(:placeholder-shown) {
+  border-radius: var(--rad) 0 0 var(--rad);
+  width: calc(100% - var(--btn-width));
+  + button {
+    display: block;
+  }
+}
+label {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+.profile{
+  margin-right: 20px; ;
 }

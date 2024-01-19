@@ -6,16 +6,25 @@ import "./NavBar.css";
 
 function NavBar() {
   return (
-    <div className="virat">
-      <div className="hai">
-        <ul className="hello">
-          <li>
-            <input type="text" id="fname" name="fname" />
-          </li>
-        </ul>
+    <div className="nav-main">
+      <div className="nav-search">
+      <form onsubmit="event.preventDefault();" role="search">
+        <label for="search">Search for stuff</label>
+        <input
+          id="search"
+          type="search"
+          placeholder="Search for Hostel,Mess,etc"
+          autofocus
+          required
+        />
+        <button type="submit">Go</button>
+      </form>
+
       </div>
-      <ImSearch size={20} />
-      <CgProfile className="ji" size={30} />
+     <div className="profile">
+       <CgProfile className="profile-pic" size={50} color="#d0d0d1" /> 
+     </div>
+      {/* this is navbar */}
     </div>
   );
 }

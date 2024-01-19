@@ -1,5 +1,6 @@
- import React from 'react'
- 
+import React from 'react'
+import { Route, Router, Routes } from 'react-router-dom'
+import Attendance from './Attendance'
  function Hostel() {
    return (
     <div> 
