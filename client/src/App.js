@@ -2,7 +2,6 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
 import NavBar from "./Components/NavBar";
-import SideNav from "./Components/SideBar";
 import Hostel from "./Pages/Hostel/Hostel";
 import Mess from "./Pages/Mess/Mess";
 import Footer from "./Components/Footer";
