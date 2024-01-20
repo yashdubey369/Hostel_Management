@@ -3,7 +3,7 @@ import React from 'react'
 function Footer() {
   return (
     <div>
-      Footer
+      <h3>Copyright</h3>
     </div>
   )
 }

@@ -22,9 +22,8 @@ function NavBar() {
 
       </div>
      <div className="profile">
-       <CgProfile className="profile-pic" size={50} color="#d0d0d1" /> 
+       <CgProfile className="profile-pic" size={40} color="#d0d0d1" /> 
      </div>
-      {/* this is navbar */}
     </div>
   );
 }

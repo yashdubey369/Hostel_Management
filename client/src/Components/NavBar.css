@@ -5,13 +5,13 @@
   height: 100%;
   width: 100%;
   display: flex;
-  background: #000124;
+  background: #2f4050;
   align-items: center;
   justify-content: space-between;
-border-radius: 20px 20px 0px 0;} 
+}
 .nav-search {
-  height: 50%;
-  width: 60%;
+  height: 85%;
+  width: 100%;
   margin-left: 30%;
 }
 :root {
@@ -96,4 +96,7 @@ label {
 }
 .profile{
   margin-right: 20px; ;
+}
+.profile-pic:hover{
+  cursor: pointer;
 }

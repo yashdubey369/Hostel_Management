@@ -1,6 +1,6 @@
 import React from 'react'
 import NavBar from '../Components/NavBar'
-import SideNav from '../Components/SideNav'
+import SideNav from '../Components/SideBar'
 
 function HomePage() {
   return (
