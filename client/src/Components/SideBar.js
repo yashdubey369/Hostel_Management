@@ -10,7 +10,7 @@ function SideBar() {
       <div className="side-container">
         <SidebarButton to="/" title="Home" icon={<FaHome className="side-icon" />}/>
         <SidebarButton to="/hostel" title="Hostel" icon={<FaHotel className="side-icon" />}/>
-        <SidebarButton to="/mess" title="mess" icon={<FaBowlFood className="side-icon" />}/>
+        <SidebarButton to="/mess" title="Mess" icon={<FaBowlFood className="side-icon" />}/>
       </div>
     </div>
   );
