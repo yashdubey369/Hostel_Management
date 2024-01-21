@@ -7,6 +7,7 @@ import Mess from "./Pages/Mess/Mess";
 import Footer from "./Components/Footer";
 import Attendance from "./Pages/Hostel/Attendance";
 import SideBar from "./Components/SideBar";
+import Apply from "./Pages/Hostel/Apply";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
               <Routes>
                 <Route exact path="/" element={<HomePage />} />
                 <Route exact path="/hostel" element={<Hostel />} />
+                <Route exact path="/hostel/apply" element={<Apply />} />
                 <Route exact path="/hostel/attendance" element={<Attendance/>} />
                 <Route exact path="/mess" element={<Mess />} />
               </Routes>
