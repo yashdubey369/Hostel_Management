@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgb(252, 238, 237);
 }
 
 .boxmain {
@@ -11,7 +12,7 @@
   height: 50rem;
   padding: 0.7rem;
   margin-left: 1rem;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 .boxheader {
   display: flex;
@@ -23,6 +24,9 @@
   font-size: 1.4rem;
   cursor: pointer;
 }
+.boxheader h2 {
+  font-size: 2.5rem;
+}
 
 .boxes {
   display: grid;
@@ -32,7 +36,7 @@
 }
 .box {
   height: 8rem;
-  background-color: #f0f0f0;
+  background-color: #7d568396;
   border: 1px solid #ccc;
   display: flex;
   justify-content: center;
