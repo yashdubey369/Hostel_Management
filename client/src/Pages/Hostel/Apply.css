@@ -1,0 +1,90 @@
+.apply-container {
+   background-color: white; 
+  height: 100%;
+   padding: 5px; 
+}
+.apply-main {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(252, 238, 237);
+  border: 3px solid black;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.row-mains input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  color: Black;
+}
+.row-mains input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  color: Black;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+.row input[type="submit"] {
+  background-color: black;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  width: 218px;
+}
+
+.row input[type="submit"]:hover {
+  background-color: rgb(50, 64, 79);
+}
+
+.row-mains {
+  font-size: 2em;
+  font-style: bold;
+  float: left;
+  width: 50%;
+  line-height: 50px;
+  margin-top: 6px;
+  margin-left: 25%;
+}
+.apply-main h1 {
+  font-size: 4rem;
+}
+.col-hi {
+  width: 100%;
+  font-size: 2rem;
+
+  display: flex;
+}
+
+ 
+.row {
+  margin-top: 25px;
+}
+.text {
+  height: 200px;
+}
+
+ 
+/* @media screen and (max-width: 600px) {
+  .col-25,
+  .col-75,
+  input[type="submit"] {
+    width: 100%;
+    margin-top: 0;
+  } */
+/* } */
