@@ -3,6 +3,8 @@
   width:100vw;
   background: #ffffff;
   /* padding: .8vw; */
+  /* display:flex ; */
+
 }
 .header{
   height: 8%;
@@ -23,6 +25,9 @@
   height: 100%;
   width: 100%;
   background: #12cc94;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 .footer{
   background: #000;

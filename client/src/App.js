@@ -8,6 +8,7 @@ import Footer from "./Components/Footer";
 import Attendance from "./Pages/Hostel/Attendance";
 import SideBar from "./Components/SideBar";
 import Apply from "./Pages/Hostel/Apply";
+import Profile from "./Pages/Hostel/Profile";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
                 <Route exact path="/hostel/apply" element={<Apply />} />
                 <Route exact path="/hostel/attendance" element={<Attendance/>} />
                 <Route exact path="/mess" element={<Mess />} />
+                <Route exact path="/hostel/profile" element={<Profile/>}/>
               </Routes>
             </div>
           </div>
