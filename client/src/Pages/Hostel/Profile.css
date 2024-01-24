@@ -1,31 +1,74 @@
 .user-profile {
   text-align: center;
-  background: #fff;
+  background: #fff3f3;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.79);
   border-color: #333;
   height: 80%;
-  padding: 20px;
+  padding: 50px;
   width: 80%;
+  margin: 0 auto; 
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
 }
 
-.user-image {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  margin: 10px auto;
-  border: 5px solid #ccc;
+.user-profile .profile-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.profile-pic {
+  flex: 1;
+  text-align: right;
+}
+
+.profile-pic img {
+  max-width: 150%;
+  width: 200px; 
+  height: 200px;
   border-radius: 50%;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  margin-left: 100px;
+  display: block;
+  box-shadow: 0px 0px 30px rgba(19, 2, 2, 0.5);
 }
 
-.user-profile h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: #333;
+.user-details {
+  flex: 2;
+  text-align: left;
+  margin-left: 130px;
 }
 
-.user-profile p {
-  font-size: 16px;
-  margin-bottom: 5px;
-  color: #555;
+.user-details p {
+  padding :10px;
+  text-align: left;
+  margin: 0px 100px 5px;
+  font-weight: bold;
+  border-bottom: 3px solid #cac8cc;
+box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+}
+.user-profile .field-name {
+  font-weight: bold;
+  margin-right: 10px;
+  color: #4b7bbd;
+  font-size:x-large;
+}
+.user-profile .field-answer {
+  font-weight: bold;
+  margin-right: 10px;
+  color: #bd4b51;
+  font-size:x-large;
+}
+
+.user-profile h1 {
+  background-color: #272424;
+  padding: 10px 100px;
+  border-radius: 25px;
+  font-size: 35px;
+  margin-bottom: 30px;
+  color: #d0cad9;
+  display: inline-block;
 }
