@@ -34,7 +34,14 @@
   margin-left: 100px;
   display: block;
   box-shadow: 0px 0px 30px rgba(19, 2, 2, 0.5);
+  border: 5px solid #e5e3c7;
+  transition: .5s;
 }
+.profile-pic img:hover {
+  border-color: #ffee10; 
+  box-shadow: 0 0 15px #ffee10; 
+}
+
 
 .user-details {
   flex: 2;
@@ -74,8 +81,8 @@
 
 .user-details p:hover {
   color: #ffee10;
-  box-shadow: 0 0 15px #ffee10;
-  text-shadow: 0 0 15px #ffee10;
+  box-shadow: 0 0 22px #ffee10;
+  text-shadow: 0 0 22px #ffee10;
 }
 .user-profile .field-name {
   font-weight: bold;
@@ -87,7 +94,7 @@
 .user-profile .field-answer {
   font-weight: bold;
   margin-right: 10px;
-  color: #111111;
+  color: #f5efef;
   font-size:x-large;
 }
 
