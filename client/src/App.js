@@ -1,3 +1,4 @@
+import 'devextreme/dist/css/dx.light.css';
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./Pages/HomePage";

@@ -1,7 +1,9 @@
+// https://js.devexpress.com/React/Documentation/Guide/React_Components/Add_DevExtreme_to_a_React_Application/
 import React, { useState } from "react";
 import "./Attendance.css";
 import { GrNext, GrPrevious } from "react-icons/gr";
-
+import { PieChart, Series } from "devextreme-react/pie-chart";
+import { billionaires } from "./AttendanceData";
 const findMonthDays = (y, m) => {
   return new Date(y, m + 1, 0).getDate();
 };
@@ -78,6 +80,11 @@ export default function App() {
           <GrNext onClick={changeToNextMonth} />
         </div>
         <div className="boxes">{showCalendar()} </div>
+      </div>
+      <div className="Pie">
+        <PieChart dataSource={billionaires} type="doughnut">
+          <Series argumentField="country" valueField="amount"></Series>
+        </PieChart>
       </div>
     </div>
   );

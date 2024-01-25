@@ -5,13 +5,15 @@
   justify-content: center;
   align-items: center;
   background-color: rgb(252, 238, 237);
+  gap: 50px;
 }
 
 .boxmain {
-  width: 90rem;
+  width: 50rem;
   height: 50rem;
   padding: 0.7rem;
   margin-left: 1rem;
+  justify-content: left;
   /* border: 1px solid blue; */
 }
 .boxheader {
@@ -51,4 +53,9 @@
 .box.selected {
   background-color: blue;
   color: white;
+}
+
+.Pie {
+  display: flex;
+  justify-content: right;
 }
