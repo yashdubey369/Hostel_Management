@@ -1,22 +1,22 @@
 export const billionaires = [
   {
-    country: "China",
+    country: "Present Days",
     amount: 1002,
   },
   {
-    country: "United States",
+    country: "Absent Days",
     amount: 716,
   },
   {
-    country: "India",
+    country: "Holidays",
     amount: 215,
   },
   {
-    country: "United Kingdom",
+    country: "Sick Leave",
     amount: 150,
   },
   {
-    country: "Germany",
+    country: "Saturday Half Day",
     amount: 145,
   },
 ];

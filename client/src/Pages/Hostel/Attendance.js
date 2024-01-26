@@ -82,7 +82,11 @@ export default function App() {
         <div className="boxes">{showCalendar()} </div>
       </div>
       <div className="Pie">
-        <PieChart dataSource={billionaires} type="doughnut">
+        <PieChart
+          title="Your Attendance Record"
+          dataSource={billionaires}
+          type="doughnut"
+        >
           <Series argumentField="country" valueField="amount"></Series>
         </PieChart>
       </div>
