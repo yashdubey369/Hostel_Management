@@ -47,9 +47,6 @@ body{
     background-color: #293846;
     
 }
-.link{
-    text-decoration: none;
-}
 .sidebar-row.active
 {
     cursor: pointer;

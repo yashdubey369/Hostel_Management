@@ -1,11 +1,11 @@
 import React from 'react'
-import NavBar from '../Components/NavBar'
-import SideNav from '../Components/SideBar'
-
+import './HomePage.css'
+import Cards from '../Components/Cards'
 function HomePage() {
   return (
-    <div>
-      <h1>This will be our homepage</h1>
+    <div className='home-main'>
+      <Cards to="/hostel" title="Hostel"/>
+      <Cards to="/mess" title="Mess"/>
     </div>
   )
 }

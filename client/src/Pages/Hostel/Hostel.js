@@ -1,13 +1,13 @@
 import React from 'react'
-import { Route, Router, Routes } from 'react-router-dom'
-import Attendance from './Attendance'
+import Cards from '../../Components/Cards'
+import "./Hostel.css"
  function Hostel() {
    return (
-    <div> 
-        <h1>
-         Hostel
-        </h1> 
-    </div>
+    <div className='hostel-main'>
+    <Cards to="/hostel/apply" title="Apply"/>
+    <Cards to="/hostel/attendance" title="Attendance"/>
+    <Cards to="/hostel/profile" title="Profile"/>
+  </div>
    )
  }
  
