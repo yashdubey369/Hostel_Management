@@ -1,7 +1,8 @@
 .link{
     text-decoration: none;
+    color: rgba(32, 0, 58, 0.9);
 }
-.cards{
+/* .cards{
     display: flex;
     justify-content:center;
     align-items:center;
@@ -19,5 +20,103 @@
 .cards:hover{
     transform: scale(1.05);
     background: #280147;
+} */
+.cards-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 30px;
+}
+.cards-container .drop{
+    width: 350px;
+    height: 350px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-shadow: inset 20px 20px 20px rgba(0,0,0,0.05),
+                25px 35px 20px rgba(0, 0, 0, 0.452),
+                25px 20px 20px rgba(0,0,0,0.05),
+                inset 25px 30px 30px rgba(32, 0, 58, 0.9);
+    animation: slide 1s linear;
+}
+@keyframes slide{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.cards-container .drop:nth-child(1){
+    border-radius: 67% 33% 28% 72% / 59% 52% 48% 41% ;
+    margin: 20px 30px 30px 0;
+}
+.cards-container .drop:nth-child(2){
+    border-radius: 15% 85% 53% 47% / 55% 41% 59% 45%  ;
+}
+.cards-container .drop::before{
+    content: '';
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-color: #17014d33;
+    top: 50px;
+    left: 80px;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+.cards-container .drop::after{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff18;
+    top: 90px;
+    left: 110px;
+    border-radius: 50%;
+    opacity: 0.8;
+}
+.cards-container .drop .content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 40px 60px;
+    gap: 15px;
+}
+.cards-container .drop .content h2{
+    margin-bottom: 15px;
+    position: relative;
+    width: 120px;
+    height: 75px;
+    color: black;
+    background-color: #ffffff00;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    color: var(--clr);
+    box-shadow: inset 2px 5px 10px rgba(0,0,0,0.1),
+                inset -2px -5px 10px rgba(255,255,255,1),
+                15px 15px 10px rgba(0, 0, 0, 0.356),
+                15px 10px 15px rgba(0,0,0,0.25);
+}
+/* -----Media Query----- */
+
+@media only screen and (max-width:800px) {
+    .container .drop{
+        width: 275px;
+        height: 275px;
+    }
+}
+@media only screen and (max-width:600px) {
+    .container{
+        flex-direction: column;
+    }
 }
  
