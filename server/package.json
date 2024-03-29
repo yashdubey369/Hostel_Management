@@ -5,7 +5,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -r dotenv/config --experimental-json-modules  src/index.js"
+    "start": "nodemon -r dotenv/config --experimental-json-modules  index.js"
   },
   "author": "Sandeep Pandit",
   "license": "ISC",
