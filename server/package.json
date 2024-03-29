@@ -1,7 +1,7 @@
 {
-  "name": "playvideo",
+  "name": "hostelsite",
   "version": "1.0.0",
-  "description": "A project of playvideo",
+  "description": "A project to develop hostel site",
   "type": "module",
   "main": "index.js",
   "scripts": {
