@@ -20,7 +20,7 @@ const signupSchema=z.object({
     password:z
     .string({required_error:"password  required"})
     .trim()
-    .min(10,{message:"password is at least 4 digit"})
+    .min(4,{message:"password is at least 4 digit"})
     .max(20,{message:"password is at max 30 digit"}),
    
 });
