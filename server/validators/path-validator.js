@@ -1,5 +1,5 @@
 import {z} from "zod";
-const signupSchema=z.object({
+const signup=z.object({
     username:z
     .string({required_error:"username  required"})
     .trim()
@@ -24,4 +24,4 @@ const signupSchema=z.object({
     .max(20,{message:"password is at max 30 digit"}),
    
 });
-export default signupSchema;
+export default signup;
