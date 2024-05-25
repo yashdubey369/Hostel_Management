@@ -16,8 +16,8 @@ const Profile = () => {
           </span></p>
           <p><span className="field-name">Age: </span>  <span className="field-answer">   {userProfile.age}</span></p>
           <p><span className="field-name">Branch: </span> <span className="field-answer">  {userProfile.branch}</span></p>
-          <p><span className="field-name">Sex: </span> <span className="field-answer">    {userProfile.sex}</span></p>
-          <p><span className="field-name">Enroll No: </span><span className="field-answer">  {userProfile.enrollNumber}</span></p>
+          <p><span className="field-name">Gender: </span> <span className="field-answer">    {userProfile.sex}</span></p>
+          <p><span className="field-name">Roll No: </span><span className="field-answer">  {userProfile.enrollNumber}</span></p>
         </div>
       </div>
     </div>
