@@ -6,11 +6,14 @@ const validation = (schema)=>async (req,res,next)=>{
     }
     catch(err){
         const status= 401;
-       // const message="fill the  details properly";
-        const message=err.errors[0].message;
        
-        console.log(message);
-res.status(400).json({msg:message});
+        const msg=err.errors[0].message;
+        const error ={
+            status,
+            msg,
+           
+        };
+next(error);
 
     }
 };

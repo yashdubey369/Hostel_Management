@@ -3,7 +3,8 @@ import express from "express";
 import cors from "cors";
 import pathRoute from './router/path-router.js';
 import connectDB from './connection.js';
-// import cookieParser from "cookie-parser";
+import errorHandlerMW from './middlewares/errorHandlerMW.js'
+
 const app = express();
 
 // const corsValue={
@@ -27,4 +28,5 @@ connectDB(URI);
 //Router
 app.use("/",pathRoute);
 app.listen(port,() => console.log(`Server is running at port : ${port}`));
-  // export default app;
+app.use(errorHandlerMW);
+ 
