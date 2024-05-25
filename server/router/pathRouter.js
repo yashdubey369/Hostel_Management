@@ -1,6 +1,5 @@
 import express from "express";
-import { Router } from "express";
-const router = Router();
+const router = express.Router();
 import pathcontroller from "../controllers/pathController.js";
 import signup from "../validators/path-validator.js";
 import validation from "../middlewares/signupMW.js";

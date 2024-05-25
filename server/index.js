@@ -2,6 +2,7 @@ import 'dotenv/config';
 import express from "express";
 import cors from "cors";
 import pathRoute from './router/pathRouter.js';
+import complainRoute from './router/complainRouter.js'
 import connectDB from './connection.js';
 import errorHandlerMW from './middlewares/errorHandlerMW.js'
 
@@ -27,6 +28,7 @@ connectDB(URI);
 
 //Router
 app.use("/",pathRoute);
+app.use("/",complainRoute);
 app.listen(port,() => console.log(`Server is running at port : ${port}`));
 app.use(errorHandlerMW);
  
