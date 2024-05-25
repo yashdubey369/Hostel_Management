@@ -1,5 +1,5 @@
 
-import User from "../models/user-model.js";
+import User from "../models/userModel.js";
 ///////////////////home funtionality////////////////////
 const home = async (req, res) => {
   try {

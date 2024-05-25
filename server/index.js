@@ -1,7 +1,7 @@
 import 'dotenv/config';
 import express from "express";
 import cors from "cors";
-import pathRoute from './router/path-router.js';
+import pathRoute from './router/pathRouter.js';
 import connectDB from './connection.js';
 import errorHandlerMW from './middlewares/errorHandlerMW.js'
 

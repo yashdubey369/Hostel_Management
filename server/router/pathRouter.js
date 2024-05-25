@@ -1,7 +1,7 @@
 import express from "express";
 import { Router } from "express";
 const router = Router();
-import pathcontroller from "../controllers/path-controller.js";
+import pathcontroller from "../controllers/pathController.js";
 import signup from "../validators/path-validator.js";
 import validation from "../middlewares/signupMW.js";
 
