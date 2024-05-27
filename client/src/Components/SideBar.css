@@ -7,12 +7,14 @@ body{
     height: 100%;
     border: 2px solid white;
     border-left: none;
+    z-index: 100;
+    
 }
 .side-container{
     height:auto;
     width: 100%;
     padding: 0px;
-    
+ 
 }
 .link{
     text-decoration: none;

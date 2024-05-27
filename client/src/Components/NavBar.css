@@ -8,6 +8,8 @@
   background: #2f4050;
   align-items: center;
   justify-content: space-between;
+  z-index: 100;
+  
 }
 .nav-search {
   height: 85%;
@@ -24,6 +26,7 @@
   --height: 5rem;
   --btn-width: 6rem;
   --bez: cubic-bezier(0, 0, 0.43, 1.49);
+ 
 }
  body {
   background: var(--color-dark);
