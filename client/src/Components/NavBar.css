@@ -19,13 +19,13 @@
   --dur: 0.3s;
   --color-dark: #d8cfcf;
   --color-light: #0a0c3ae1;
-  --color-brand: #57bd84;
+ 
   --font-fam: "Lato", sans-serif;
   --height: 5rem;
   --btn-width: 6rem;
   --bez: cubic-bezier(0, 0, 0.43, 1.49);
 }
-body {
+ body {
   background: var(--color-dark);
   display: flex;
   align-items: center;
@@ -41,7 +41,7 @@ html {
 *::after {
   box-sizing: inherit;
 }
-form {
+.nav-main form {
   
   position: relative;
   width: 65rem;
@@ -68,7 +68,7 @@ input[type="search"] {
   z-index: 1;
   position: relative;
 }
-button {
+.nav-search button {
   display: none;
   position: absolute;
   top: 0;
