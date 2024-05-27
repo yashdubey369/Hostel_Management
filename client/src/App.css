@@ -48,7 +48,7 @@
   align-items: center;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.8);
   margin: auto auto;
-  padding: 40px;
+  padding: 18px;
   position: absolute;
   top: 50%;
   left: 57%;
@@ -76,13 +76,15 @@
   color: #fff;
   font-size: 18px;
   letter-spacing: 2px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   outline: none;
   padding: 10px 0;
   width: 100%;
  
 }
-
+.boxe label{
+  font-size: 20px;
+}
 .boxe input[type="submit"],
 .boxe button[type="submit"],
 a.button {

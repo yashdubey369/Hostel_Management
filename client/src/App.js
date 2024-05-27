@@ -17,7 +17,7 @@ import Particlesbg from "./Components/Particlesbg";
 
 const WrapContent=()=>{
   const location=useLocation();
-  const ActiveParticles=location.pathname==="/login"||location.pathname==="/register";
+  const ActiveParticles=location.pathname==="/login"||location.pathname==="/register"||location.pathname==="/complain";
 
   return (
     <>
