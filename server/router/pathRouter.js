@@ -1,8 +1,8 @@
 import express from "express";
 const router = express.Router();
 import pathcontroller from "../controllers/pathController.js";
-import signup from "../validators/path-validator.js";
-import login from "../validators/path-validator.js";
+import {signup,login} from "../validators/path-validator.js";
+//import login from "../validators/path-validator.js";
 import validation from "../middlewares/signupMW.js";
 
 router.route("/").get(pathcontroller.home);

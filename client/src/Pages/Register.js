@@ -19,6 +19,7 @@ const URL="http://localhost:8000/register";
         console.log(e);
         let name=e.target.name;
         let value=e.target.value;
+        value = value.replace("+91", "");
         setUser({
           
             ...user,

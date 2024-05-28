@@ -35,12 +35,12 @@ const login=z.object({
     .string({required_error:"email  required"})
     .trim()
     .min(3,{message:"email is at least 3 character"})
-    .max(50,{message:"email is at max 30 character"})
-    .email({ message: "Please enter a valid email address" })
-    .refine((value) => {
-        // Custom refinement to check for "@" and "."
-        return value.includes("@") && value.includes(".");
-      }, { message: "Please enter a valid email address" }),
+    .max(50,{message:"email is at max 30 character"}),
+    // .email({ message: "Please enter a valid email address" })
+    // .refine((value) => {
+    //     // Custom refinement to check for "@" and "."
+    //     return value.includes("@") && value.includes(".");
+    //   }, { message: "Please enter a valid email address" }),
     password:z
     .string({required_error:"password  required"})
     .trim()
@@ -48,4 +48,4 @@ const login=z.object({
     .max(20,{message:"password is at max 30 digit"}),
    
 });
-export default {signup,login};
+export  {signup,login};
