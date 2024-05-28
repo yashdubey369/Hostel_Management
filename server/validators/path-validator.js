@@ -11,7 +11,11 @@ const signup=z.object({
     .trim()
     .min(3,{message:"email is at least 3 character"})
     .max(50,{message:"email is at max 30 character"})
-    .email({ message: "Please enter a valid email address" }),
+    .email({ message: "Please enter a valid email address" })
+    .refine((value) => {
+        // Custom refinement to check for "@" and "."
+        return value.includes("@") && value.includes(".");
+      }, { message: "Please enter a valid email address" }),
   
     phone:z
     .string({required_error:"phone  required"})
@@ -25,4 +29,23 @@ const signup=z.object({
     .max(20,{message:"password is at max 30 digit"}),
    
 });
-export default signup;
+const login=z.object({
+   
+    email:z
+    .string({required_error:"email  required"})
+    .trim()
+    .min(3,{message:"email is at least 3 character"})
+    .max(50,{message:"email is at max 30 character"})
+    .email({ message: "Please enter a valid email address" })
+    .refine((value) => {
+        // Custom refinement to check for "@" and "."
+        return value.includes("@") && value.includes(".");
+      }, { message: "Please enter a valid email address" }),
+    password:z
+    .string({required_error:"password  required"})
+    .trim()
+    .min(4,{message:"password is at least 4 digit"})
+    .max(20,{message:"password is at max 30 digit"}),
+   
+});
+export default {signup,login};
