@@ -6,6 +6,7 @@ import NavBar from "./Components/NavBar";
 import Hostel from "./Pages/Hostel/Hostel";
 import Register from "./Pages/Register";
 import Login from "./Pages/Login";
+import Logout from './Pages/Logout';
 import Complain from "./Pages/Complain";
 import Mess from "./Pages/Mess/Mess";
 import Footer from "./Components/Footer";
@@ -27,6 +28,7 @@ const WrapContent=()=>{
                <Route exact path="/" element={<HomePage />} />
                <Route exact path="/register" element={<Register />} />
                <Route exact path="/login" element={<Login />} />
+               <Route exact path="/logout" element={<Logout />} />
                <Route exact path="/complain" element={<Complain />} />
                <Route exact path="/hostel/apply" element={<Apply />} />
                <Route exact path="/hostel/attendance" element={<Attendance/>} />
