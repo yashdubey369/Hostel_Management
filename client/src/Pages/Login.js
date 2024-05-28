@@ -30,8 +30,9 @@ const Login =()=>{
            },
            body:JSON.stringify(user),
         })
+        const statusReport=await status.json();
         if(status.ok){
-          const statusReport=await status.json();
+         
           //for handling of props drilling , using context api from there we call this function or for every program 
           //may be using redux concept later
           localStorageTokenStore(statusReport.token);
@@ -40,6 +41,9 @@ const Login =()=>{
          
           password:"",})
           navigate("/");
+        }
+        else{
+          alert("invalid details");
         }
       }
       catch(err){

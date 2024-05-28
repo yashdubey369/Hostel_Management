@@ -41,8 +41,11 @@ const URL="http://localhost:8000/register";
               },
               body:JSON.stringify(user),
             });
+          
+            const statusReport=await status.json();
+          
             if(status.ok){
-              const statusReport=await status.json();
+
               //for handling of props drilling , using context api from there we call this function or for every program 
               //may be using redux concept later
               localStorageTokenStore(statusReport.token);
@@ -50,11 +53,15 @@ const URL="http://localhost:8000/register";
               email:"",
               phone:"",
               password:"",})
-              navigate("/login");
+              
+            navigate("/login");
             }
-            console.log(status);
+            else{
+              alert(statusReport.msg);
+            }
+          
             }catch(err){
-              console.log(err);
+              console.log("erroe during reg",err);
             }
      }
    return (

@@ -10,7 +10,8 @@ const signup=z.object({
     .string({required_error:"email  required"})
     .trim()
     .min(3,{message:"email is at least 3 character"})
-    .max(50,{message:"email is at max 30 character"}),
+    .max(50,{message:"email is at max 30 character"})
+    .email({ message: "Please enter a valid email address" }),
   
     phone:z
     .string({required_error:"phone  required"})
