@@ -1,6 +1,7 @@
 import { useState } from 'react';
-
-
+import { useNavigate } from 'react-router-dom';
+import  {useCustomConsumerData}  from '../localStorage/authenticateToken';
+const URL="http://localhost:8000/register";
  const Register =()=>{
 
     const [user,setUser]=useState({
@@ -12,7 +13,8 @@ import { useState } from 'react';
 
     });
 
-   
+    const navigate=useNavigate();
+   const {localStorageTokenStore}=useCustomConsumerData();
      const handleInput=(e)=>{
         console.log(e);
         let name=e.target.name;
@@ -30,7 +32,30 @@ import { useState } from 'react';
      const handleSubmit =async(e)=>{
             e.preventDefault();
             console.log(user);
-          
+            try{
+            const status=await fetch(URL,{
+              method:"POST",
+              headers:{
+                "Content-Type":"application/json",
+
+              },
+              body:JSON.stringify(user),
+            });
+            if(status.ok){
+              const statusReport=await status.json();
+              //for handling of props drilling , using context api from there we call this function or for every program 
+              //may be using redux concept later
+              localStorageTokenStore(statusReport.token);
+              setUser( { username:"",
+              email:"",
+              phone:"",
+              password:"",})
+              navigate("/login");
+            }
+            console.log(status);
+            }catch(err){
+              console.log(err);
+            }
      }
    return (
     <>

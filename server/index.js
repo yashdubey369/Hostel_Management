@@ -8,13 +8,14 @@ import errorHandlerMW from './middlewares/errorHandlerMW.js'
 
 const app = express();
 
-// const corsValue={
-//   origin: process.env.CORS_ORIGIN,
-//   credentials: true,
-// }
+const corsValue={
+  origin:"http://localhost:3000",
+  methods:"GET,POST,PUT,DELETE,PATCH",
+  credentials: true,
+}
 
 //Middlewares
-// app.use(cors(corsValue));
+ app.use(cors(corsValue));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true, limit: "16kb" }));
 // app.use(express.static("public"));
