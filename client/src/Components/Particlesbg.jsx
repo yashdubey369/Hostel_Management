@@ -66,7 +66,7 @@ const Movie = () => {
                             default: "bounce",
                         },
                         random: false,
-                        speed: 6,
+                        speed: 8,
                         straight: false,
                     },
                     number: {
@@ -77,7 +77,7 @@ const Movie = () => {
                         value: 80,
                     },
                     opacity: {
-                        value: 0.5,
+                        value: 0.9,
                     },
                     shape: {
                         type: "circle",
