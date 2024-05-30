@@ -24,6 +24,7 @@ body{
     padding:20px 0px;
     text-align: center;
     color: white;
+   
 }
 
 .sidebar-row{
@@ -47,6 +48,7 @@ body{
     cursor: pointer;
     transform: scale(1.01);
     background-color: #293846;
+  
     
 }
 .sidebar-row.active

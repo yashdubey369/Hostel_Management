@@ -58,6 +58,7 @@ const Login =()=>{
    
      <div className="inputBox">
        <label htmlFor="email">email</label>
+       <i class="far fa-envelope"></i>
        <input
          type="email"
          name="email"
@@ -72,6 +73,7 @@ const Login =()=>{
     
      <div className="inputBox">
        <label htmlFor="password">Password</label>
+       <i class="fas fa-lock"></i>
        <input
          type="password"
          name="password"

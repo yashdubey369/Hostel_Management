@@ -72,6 +72,7 @@ const URL="http://localhost:8000/register";
 <form onSubmit={handleSubmit}>
     <div className="inputBox">
     <label htmlFor="username">username</label>
+<i class="fa-solid fa-user-pen"></i>
     <input
     type="text"
     name="username"
@@ -82,9 +83,11 @@ const URL="http://localhost:8000/register";
     value={user.username}
     onChange={handleInput}
    />
+    <div class="error"></div>
     </div>
     <div className="inputBox">
       <label htmlFor="email">email</label>
+<i class="far fa-envelope"></i>
       <input
         type="email"
         name="email"
@@ -95,9 +98,11 @@ const URL="http://localhost:8000/register";
         value={user.email}
         onChange={handleInput}
       />
+       <div class="error"></div>
     </div>
     <div className="inputBox">
       <label htmlFor="phone">Phone</label>
+<i class="fa-solid fa-phone"></i>
       <input
         type="number"
         name="phone"
@@ -108,9 +113,11 @@ const URL="http://localhost:8000/register";
         value={user.phone}
         onChange={handleInput}
       />
+       <div class="error"></div>
     </div>
     <div className="inputBox">
       <label htmlFor="password">Password</label>
+<i class="fas fa-lock"></i>
       <input
         type="password"
         name="password"
@@ -121,6 +128,7 @@ const URL="http://localhost:8000/register";
         value={user.password}
         onChange={handleInput}
       />
+       <div class="error"></div>
     </div>
   
     <button type="submit" style={{ float: 'left' }}>Signup</button>

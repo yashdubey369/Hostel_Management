@@ -1,4 +1,6 @@
 import {z} from "zod";
+
+
 const signup=z.object({
     username:z
     .string({required_error:"username  required"})

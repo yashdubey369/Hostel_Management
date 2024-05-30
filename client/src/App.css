@@ -48,10 +48,10 @@
   align-items: center;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.8);
   margin: auto auto;
-  padding: 18px;
+  padding: 15px;
   position: absolute;
-  top: 50%;
-  left: 57%;
+  top: 53%;
+  left: 53%;
  width:34%;
   transform: translate(-50%, -50%);
 
@@ -69,19 +69,69 @@
   color: #fff;
 }
 
+
+
 .boxe .inputBox input {
   background: transparent!important;
   border: none;
   border-bottom: 1px solid #fff;
   color: #fff;
-  font-size: 18px;
+  font-size: 15px;
   letter-spacing: 2px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   outline: none;
-  padding: 10px 0;
-  width: 100%;
+  padding: 7px 0;
+  width: 90%;
  
 }
+.boxe .inputBox input:focus{
+  outline: 0;
+}
+
+.boxe .inputBox.success input {
+  border-color: #09c372;
+}
+
+.boxe .inputBox.error input {
+  border-color: #ff3860;
+}
+
+.boxe .inputBox .error {
+  color: #ff3860;
+  font-size: 9px;
+  height: 13px;
+}
+
+
+.boxe i{
+  font-size: 17px;
+  color: #fff;
+}
+
+
+
+form div i {
+  position: absolute;
+  padding: 10px;
+  margin-top: 8px;
+  padding-right:10px;
+}
+.far fa-check-circle success-icon{
+  margin-right: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .boxe label{
   font-size: 20px;
 }
@@ -90,13 +140,13 @@
 a.button {
   font-family: sans-serif;
   background: #03a9f4;
-  font-size: 11px;
+  font-size: 12px;
   border: none;
   border-radius: 5px;
   color: #fff;
   cursor: pointer;
   font-weight: 600;
-  padding: 10px 20px 10px 20px;
+  padding: 10px 220px 10px 193px;
   letter-spacing: 2px;
   outline: none;
   text-transform: uppercase;
@@ -108,6 +158,24 @@ a.button {
 
 }
 
+.failure-icon,
+.error {
+  color: red;
+}
+
+.success-icon {
+  color: green;
+}
+
+.error {
+  font-size: 14.5px;
+  margin-top: 5px;
+}
+.success-icon,
+.failure-icon {
+  right: 0;
+  opacity: 0;
+}
 
 .boxe input[type="submit"]:hover,
 .boxe button[type="submit"]:hover,
