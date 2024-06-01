@@ -1,38 +1,52 @@
-import { useState } from 'react';
+
+
+
+
+
+
+
+
+
+
+
+
+
 import { useNavigate } from 'react-router-dom';
 import  {useCustomConsumerData}  from '../localStorage/authenticateToken';
+import { useFormik } from 'formik';
+import{ signupSchema }from "../schemas/signUp.jsx";
 const URL="http://localhost:8000/register";
+
+const initialValues={
+  username:"",
+  email:"",
+  phone:"",
+  password:"",
+  
+}
  const Register =()=>{
-
-    const [user,setUser]=useState({
-        username:"",
-        email:"",
-        phone:"",
-        password:"",
-       
-
-    });
-
+ 
+  const{values,errors,touched, handleBlur,handleChange} =useFormik({
+    initialValues:initialValues,
+    validationSchema:signupSchema,
+    onSubmit:(values)=>{
+   
+    }
+  })
+ 
+  
     const navigate=useNavigate();
    const {localStorageTokenStore}=useCustomConsumerData();
-     const handleInput=(e)=>{
-        console.log(e);
-        let name=e.target.name;
-        let value=e.target.value;
-        value = value.replace("+91", "");
-        setUser({
-          
-            ...user,
-          
-            [name]:value,
-
-        })
-     }
 
 
      const handleSubmit =async(e)=>{
             e.preventDefault();
-            console.log(user);
+            if (errors.username || errors.email || errors.phone || errors.password) {
+            
+             
+              return; 
+            }
+          
             try{
             const status=await fetch(URL,{
               method:"POST",
@@ -40,7 +54,7 @@ const URL="http://localhost:8000/register";
                 "Content-Type":"application/json",
 
               },
-              body:JSON.stringify(user),
+              body:JSON.stringify(values),
             });
           
             const statusReport=await status.json();
@@ -50,10 +64,7 @@ const URL="http://localhost:8000/register";
               //for handling of props drilling , using context api from there we call this function or for every program 
               //may be using redux concept later
               localStorageTokenStore(statusReport.token);
-              setUser( { username:"",
-              email:"",
-              phone:"",
-              password:"",})
+            
               
             navigate("/login");
             }
@@ -80,10 +91,11 @@ const URL="http://localhost:8000/register";
     id="username"
     required
     autoComplete="off"
-    value={user.username}
-    onChange={handleInput}
+    value={values.username}
+    onChange={handleChange}
+    onBlur={handleBlur}
    />
-    <div class="error"></div>
+    {errors.username && touched.username ?<p className="form-error">{errors.username}</p>:null}
     </div>
     <div className="inputBox">
       <label htmlFor="email">email</label>
@@ -95,25 +107,28 @@ const URL="http://localhost:8000/register";
         placeholder="type your email"
         required
         autoComplete="off"
-        value={user.email}
-        onChange={handleInput}
+        value={values.email}
+        onChange={handleChange}
+        
+        onBlur={handleBlur}
       />
-       <div class="error"></div>
+       {errors.email && touched.email ?<p className="form-error">{errors.email}</p>:null}
     </div>
     <div className="inputBox">
       <label htmlFor="phone">Phone</label>
 <i class="fa-solid fa-phone"></i>
       <input
-        type="number"
+        type="text"
         name="phone"
         id="phone"
         placeholder="type your phone"
         required
         autoComplete="off"
-        value={user.phone}
-        onChange={handleInput}
+        value={values.phone}
+        onChange={handleChange}
+        onBlur={handleBlur}
       />
-       <div class="error"></div>
+        {errors.phone && touched.phone ?<p className="form-error">{errors.phone}</p>:null}
     </div>
     <div className="inputBox">
       <label htmlFor="password">Password</label>
@@ -125,10 +140,11 @@ const URL="http://localhost:8000/register";
         placeholder="type your password"
         required
         autoComplete="off"
-        value={user.password}
-        onChange={handleInput}
+        value={values.password}
+        onChange={handleChange}
+        onBlur={handleBlur}
       />
-       <div class="error"></div>
+        {errors.password && touched.password ?<p className="form-error">{errors.password}</p>:null}
     </div>
   
     <button type="submit" style={{ float: 'left' }}>Signup</button>

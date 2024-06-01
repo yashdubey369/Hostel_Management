@@ -69,8 +69,12 @@
   color: #fff;
 }
 
-
-
+.form-error {
+ 
+  color: red; /* Change to your desired error message color */
+  font-size: 14px; /* Adjust font size as needed */
+  margin-top: 0px; /* Add spacing between input field and error message */
+}
 .boxe .inputBox input {
   background: transparent!important;
   border: none;

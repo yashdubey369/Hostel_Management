@@ -1,34 +1,44 @@
-import { useState } from 'react';
+
+
+
 import {useNavigate } from 'react-router-dom';
+import { useFormik } from 'formik';
+import {loginSchema} from "../schemas/signUp.jsx";
 import {useCustomConsumerData} from '../localStorage/authenticateToken';
 const URL="http://localhost:8000/login"
+const initialValues={
+ 
+  email:"",
+
+  password:"",
+  
+}
+
 const Login =()=>{
-    const [user,setUser]=useState({
-        email:"",
-        password:"",
-    });
 
-    const handleInput=(e)=>{
-        let name=e.target.name;
-        let value=e.target.value;
-
-        setUser({
-            ...user,
-            [name]:value,
-
-        })
+  const{values,errors,touched, handleBlur,handleChange} =useFormik({
+    initialValues:initialValues,
+    validationSchema:loginSchema,
+    onSubmit:(values)=>{
+   
     }
+  })
+  
     const navigate=useNavigate();
     const  {localStorageTokenStore}=useCustomConsumerData();
       const handleSubmit= async(e)=>{
         e.preventDefault();
+        if ( errors.email ||errors.password) {
+  
+          return; 
+        }
         try{
         const status=await fetch(URL,{
            method:"POST",
            headers:{
                "Content-Type":"application/json",
            },
-           body:JSON.stringify(user),
+           body:JSON.stringify(values),
         })
         const statusReport=await status.json();
         if(status.ok){
@@ -36,10 +46,7 @@ const Login =()=>{
           //for handling of props drilling , using context api from there we call this function or for every program 
           //may be using redux concept later
           localStorageTokenStore(statusReport.token);
-          setUser( { 
-          email:"",
          
-          password:"",})
           navigate("/");
         }
         else{
@@ -66,9 +73,11 @@ const Login =()=>{
          placeholder="type your email"
          required
          autoComplete="off"
-         value={user.email}
-         onChange={handleInput}
+         value={values.email}
+         onChange={handleChange}
+         onBlur={handleBlur}
        />
+        {errors.email && touched.email ?<p className="form-error">{errors.email}</p>:null}
      </div>
     
      <div className="inputBox">
@@ -81,9 +90,11 @@ const Login =()=>{
          placeholder="type your password"
          required
          autoComplete="off"
-         value={user.password}
-         onChange={handleInput}
+         value={values.password}
+         onChange={handleChange}
+         onBlur={handleBlur}
        />
+        {errors.password && touched.password ?<p className="form-error">{errors.password}</p>:null}
      </div>
    
      <button type="submit" style={{ float: 'left' }}>Login</button>
