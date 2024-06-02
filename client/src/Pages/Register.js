@@ -30,8 +30,7 @@ const initialValues={
      const handleSubmit =async(e)=>{
             e.preventDefault();
             if (errors.username || errors.email || errors.phone || errors.password) {
-            
-             
+  
               return; 
             }
           
@@ -65,25 +64,28 @@ const initialValues={
             }
      }
 
- 
-    const renderValidationIcon = (fieldName) => {
-      if (!errors[fieldName] && (values[fieldName] !== '' || touched[fieldName])) {
-        
-        return (
-          <span className="validation-icon success">
-            <i className="fa-solid fa-circle-check"></i>
-          </span>
-        );
-      } else if (errors[fieldName]) {
-
-        return (
-          <span className="validation-icon error">
-            <i className="fa-solid fa-circle-exclamation"></i>
-          </span>
-        );
+     
+     const renderValidationIcon = (fieldName) => {
+      if (values[fieldName] !== '') {
+        if (errors[fieldName]) {
+         
+          return (
+            <span className="validation-icon error">
+              <i className="fa-solid fa-circle-exclamation"></i>
+            </span>
+          );
+        } else {
+         
+          return (
+            <span className="validation-icon success">
+              <i className="fa-solid fa-circle-check"></i>
+            </span>
+          );
+        }
       }
       return null;
     };
+    
    return (
     <>
    <section>
@@ -130,8 +132,8 @@ const initialValues={
         onChange={handleChange}
         
         onBlur={handleBlur}
-        error={errors.username}
-        touched={touched.username}
+        error={errors.email}
+        touched={touched.email}
         style={{
           borderBottom: `${values.email === '' ? '1px solid #ccc' : (errors.email? '1px solid red' : '1px solid #09c372')}`,
         }}
@@ -154,8 +156,8 @@ const initialValues={
         value={values.phone}
         onChange={handleChange}
         onBlur={handleBlur}
-        error={errors.username}
-        touched={touched.username}
+        error={errors.phone}
+        touched={touched.phone}
         style={{
           borderBottom: `${values.phone === '' ? '1px solid #ccc' : (errors.phone ? '1px solid red' : '1px solid #09c372')}`,
         }}
@@ -177,8 +179,8 @@ const initialValues={
         value={values.password}
         onChange={handleChange}
         onBlur={handleBlur}
-        error={errors.username}
-        touched={touched.username}
+        error={errors.password}
+        touched={touched.password}
         style={{
           borderBottom: `${values.password === '' ? '1px solid #ccc' : (errors.password ? '1px solid red' : '1px solid #09c372')}`,
         }}

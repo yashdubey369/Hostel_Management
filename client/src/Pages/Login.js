@@ -56,23 +56,26 @@ const Login =()=>{
       }
       }
       const renderValidationIcon = (fieldName) => {
-        if (!errors[fieldName] && (values[fieldName] !== '' || touched[fieldName])) {
-          
-          return (
-            <span className="validation-icon success">
-              <i className="fa-solid fa-circle-check"></i>
-            </span>
-          );
-        } else if (errors[fieldName]) {
-  
-          return (
-            <span className="validation-icon error">
-              <i className="fa-solid fa-circle-exclamation"></i>
-            </span>
-          );
+        if (values[fieldName] !== '') {
+          if (errors[fieldName]) {
+           
+            return (
+              <span className="validation-icon error">
+                <i className="fa-solid fa-circle-exclamation"></i>
+              </span>
+            );
+          } else {
+            
+            return (
+              <span className="validation-icon success">
+                <i className="fa-solid fa-circle-check"></i>
+              </span>
+            );
+          }
         }
         return null;
       };
+      
     return (
          <>
     <section>
