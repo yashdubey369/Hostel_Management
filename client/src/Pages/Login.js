@@ -57,6 +57,24 @@ const Login =()=>{
             console.log(err);
       }
       }
+      const renderValidationIcon = (fieldName) => {
+        if (!errors[fieldName] && (values[fieldName] !== '' || touched[fieldName])) {
+          
+          return (
+            <span className="validation-icon success">
+              <i className="fa-solid fa-circle-check"></i>
+            </span>
+          );
+        } else if (errors[fieldName]) {
+  
+          return (
+            <span className="validation-icon error">
+              <i className="fa-solid fa-circle-exclamation"></i>
+            </span>
+          );
+        }
+        return null;
+      };
     return (
          <>
     <section>
@@ -65,7 +83,7 @@ const Login =()=>{
    
      <div className="inputBox">
        <label htmlFor="email">email</label>
-       <i class="far fa-envelope"></i>
+       {renderValidationIcon("email")}
        <input
          type="email"
          name="email"
@@ -76,13 +94,18 @@ const Login =()=>{
          value={values.email}
          onChange={handleChange}
          onBlur={handleBlur}
+         error={errors.username}
+        touched={touched.username}
+        style={{
+          borderBottom: `${values.email === '' ? '1px solid #ccc' : (errors.email? '1px solid red' : '1px solid #09c372')}`,
+        }}
        />
         {errors.email && touched.email ?<p className="form-error">{errors.email}</p>:null}
      </div>
     
      <div className="inputBox">
        <label htmlFor="password">Password</label>
-       <i class="fas fa-lock"></i>
+     
        <input
          type="password"
          name="password"
@@ -93,8 +116,14 @@ const Login =()=>{
          value={values.password}
          onChange={handleChange}
          onBlur={handleBlur}
+         error={errors.username}
+         touched={touched.username}
+         style={{
+           borderBottom: `${values.password === '' ? '1px solid #ccc' : (errors.password ? '1px solid red' : '1px solid #09c372')}`,
+         }}
        />
         {errors.password && touched.password ?<p className="form-error">{errors.password}</p>:null}
+        {renderValidationIcon("password")}
      </div>
    
      <button type="submit" style={{ float: 'left' }}>Login</button>

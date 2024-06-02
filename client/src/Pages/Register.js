@@ -1,16 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
 import { useNavigate } from 'react-router-dom';
 import  {useCustomConsumerData}  from '../localStorage/authenticateToken';
 import { useFormik } from 'formik';
@@ -26,7 +14,7 @@ const initialValues={
 }
  const Register =()=>{
  
-  const{values,errors,touched, handleBlur,handleChange} =useFormik({
+  const{values,errors,touched,handleBlur,handleChange} =useFormik({
     initialValues:initialValues,
     validationSchema:signupSchema,
     onSubmit:(values)=>{
@@ -76,6 +64,26 @@ const initialValues={
               console.log("erroe during reg",err);
             }
      }
+
+ 
+    const renderValidationIcon = (fieldName) => {
+      if (!errors[fieldName] && (values[fieldName] !== '' || touched[fieldName])) {
+        
+        return (
+          <span className="validation-icon success">
+            <i className="fa-solid fa-circle-check"></i>
+          </span>
+        );
+      } else if (errors[fieldName]) {
+
+        return (
+          <span className="validation-icon error">
+            <i className="fa-solid fa-circle-exclamation"></i>
+          </span>
+        );
+      }
+      return null;
+    };
    return (
     <>
    <section>
@@ -83,7 +91,8 @@ const initialValues={
 <form onSubmit={handleSubmit}>
     <div className="inputBox">
     <label htmlFor="username">username</label>
-<i class="fa-solid fa-user-pen"></i>
+    {renderValidationIcon("username")}
+
     <input
     type="text"
     name="username"
@@ -94,12 +103,22 @@ const initialValues={
     value={values.username}
     onChange={handleChange}
     onBlur={handleBlur}
+    error={errors.username}
+    touched={touched.username}
+    style={{
+      borderBottom: `${values.username === '' ? '1px solid #ccc' : (errors.username ? '1px solid red' : '1px solid #09c372')}`,
+    }}
+   
    />
+   
     {errors.username && touched.username ?<p className="form-error">{errors.username}</p>:null}
+ 
+    
     </div>
     <div className="inputBox">
       <label htmlFor="email">email</label>
-<i class="far fa-envelope"></i>
+      {renderValidationIcon("email")}
+
       <input
         type="email"
         name="email"
@@ -111,12 +130,20 @@ const initialValues={
         onChange={handleChange}
         
         onBlur={handleBlur}
+        error={errors.username}
+        touched={touched.username}
+        style={{
+          borderBottom: `${values.email === '' ? '1px solid #ccc' : (errors.email? '1px solid red' : '1px solid #09c372')}`,
+        }}
       />
        {errors.email && touched.email ?<p className="form-error">{errors.email}</p>:null}
+
+     
     </div>
     <div className="inputBox">
       <label htmlFor="phone">Phone</label>
-<i class="fa-solid fa-phone"></i>
+      {renderValidationIcon("phone")}
+
       <input
         type="text"
         name="phone"
@@ -127,12 +154,19 @@ const initialValues={
         value={values.phone}
         onChange={handleChange}
         onBlur={handleBlur}
+        error={errors.username}
+        touched={touched.username}
+        style={{
+          borderBottom: `${values.phone === '' ? '1px solid #ccc' : (errors.phone ? '1px solid red' : '1px solid #09c372')}`,
+        }}
       />
         {errors.phone && touched.phone ?<p className="form-error">{errors.phone}</p>:null}
+        
+     
     </div>
     <div className="inputBox">
       <label htmlFor="password">Password</label>
-<i class="fas fa-lock"></i>
+
       <input
         type="password"
         name="password"
@@ -143,8 +177,15 @@ const initialValues={
         value={values.password}
         onChange={handleChange}
         onBlur={handleBlur}
+        error={errors.username}
+        touched={touched.username}
+        style={{
+          borderBottom: `${values.password === '' ? '1px solid #ccc' : (errors.password ? '1px solid red' : '1px solid #09c372')}`,
+        }}
       />
         {errors.password && touched.password ?<p className="form-error">{errors.password}</p>:null}
+    
+          {renderValidationIcon("password")}
     </div>
   
     <button type="submit" style={{ float: 'left' }}>Signup</button>

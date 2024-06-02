@@ -34,7 +34,7 @@
   width: 100%;
   color: #ffffff;
 }
-
+/* /////////////////////////------------------- REGISTER LOGIN COMPLAIN PAGE CSS START------------------///////////////////////////////////////////////////////// */
 * {
   box-sizing: border-box;
 }
@@ -48,16 +48,33 @@
   align-items: center;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.8);
   margin: auto auto;
-  padding: 15px;
-  position: absolute;
-  top: 53%;
-  left: 53%;
- width:34%;
+  padding: 15px 25px 85px ;
+
+  position: relative;
+  margin-top: 140%;
+  
+margin-left: 25%;
+ width:150%;
   transform: translate(-50%, -50%);
 
 
 }
+.boxe .validation-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 50px; /* Position icons at right side */
+  font-size: 17px;
+  color: #f6e9e9;
+}
+.boxe .validation-icon.error {
+  color: #e6153f;
+  
+}
 
+.boxe .validation-icon.success {
+  color: #09c372;
+}
 .boxe h2 {
   margin: 0 0 20px 0;
   padding: 0;
@@ -71,9 +88,15 @@
 
 .form-error {
  
-  color: red; /* Change to your desired error message color */
-  font-size: 14px; /* Adjust font size as needed */
-  margin-top: 0px; /* Add spacing between input field and error message */
+  color: red; 
+  font-size: 14px;
+  margin-top: 0px; 
+}
+.boxe .inputBox {
+  position: relative;
+margin-bottom: 3px;
+
+
 }
 .boxe .inputBox input {
   background: transparent!important;
@@ -87,29 +110,25 @@
   padding: 7px 0;
   width: 90%;
  
+
+ 
 }
 .boxe .inputBox input:focus{
   outline: 0;
 }
 
-.boxe .inputBox.success input {
-  border-color: #09c372;
-}
 
-.boxe .inputBox.error input {
-  border-color: #ff3860;
+.boxe .inputBox .validation-icon {
+  
+ 
+  top: 50%;
+  transform: translateY(-70%);
+  padding: 10px;
 }
-
-.boxe .inputBox .error {
-  color: #ff3860;
-  font-size: 9px;
-  height: 13px;
-}
-
 
 .boxe i{
   font-size: 17px;
-  color: #fff;
+  
 }
 
 
@@ -119,22 +138,11 @@ form div i {
   padding: 10px;
   margin-top: 8px;
   padding-right:10px;
+ 
 }
 .far fa-check-circle success-icon{
   margin-right: 100px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 .boxe label{
   font-size: 20px;
@@ -146,45 +154,31 @@ a.button {
   background: #03a9f4;
   font-size: 12px;
   border: none;
-  border-radius: 5px;
+  border-radius: 15px;
   color: #fff;
   cursor: pointer;
   font-weight: 600;
-  padding: 10px 220px 10px 193px;
+ 
   letter-spacing: 2px;
   outline: none;
   text-transform: uppercase;
   text-decoration: none;
-  margin: 2px 10px 2px 0;
+margin-top: 20px;
+
+width: 90%;
   display: inline-block;
  
 
 
 }
 
-.failure-icon,
-.error {
-  color: red;
-}
-
-.success-icon {
-  color: green;
-}
-
-.error {
-  font-size: 14.5px;
-  margin-top: 5px;
-}
-.success-icon,
-.failure-icon {
-  right: 0;
-  opacity: 0;
-}
 
 .boxe input[type="submit"]:hover,
 .boxe button[type="submit"]:hover,
 a.button:hover {
+ 
   opacity: 0.8;
 } 
 
 
+/* /////////////////////////////////////////////////----------------REGISTER LOGIN COMPLAIN PAGE CSS END-------------------------/////////////////////////// */

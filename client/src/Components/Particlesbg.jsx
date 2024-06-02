@@ -23,6 +23,7 @@ const Movie = () => {
                 background: {
                     color: {
                         value: "#121010",
+                       
                     },
                 },
                 fpsLimit: 120,
