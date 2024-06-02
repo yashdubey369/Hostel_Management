@@ -63,7 +63,7 @@ margin-left: 25%;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 50px; /* Position icons at right side */
+  right: 50px; 
   font-size: 17px;
   color: #f6e9e9;
 }
